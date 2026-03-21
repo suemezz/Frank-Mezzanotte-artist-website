@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Abstracts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Art Mezzanotte</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About the Artist</a>
+
+</nav>
+
+<div class="container">
+
+<h2>Abstracts</h2>
+
+<div class="gallery">
+
+<!-- Artwork 1 -->
+
+<div class="artwork">
+
+<img src="images/other1.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Alphabet Soup</p>
+<p>Acrylic on Canvas</p>
+<p>30"x40"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 2 -->
+
+<div class="artwork">
+
+<img src="images/other2.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Mosaic</p>
+<p>Acrylic on Canvas</p>
+<p>24"x36"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 3 -->
+
+<div class="artwork">
+
+<img src="images/other3.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Mello Yello</p>
+<p>Acrylic on Canvas</p>
+<p>24"x36"</p>
+</div>
+
+</div>
+
+<!-- Artwork 4 -->
+
+<div class="artwork">
+
+<img src="images/other4.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Crimson Sunset</p>
+<p>Acrylic on Canvas</p>
+<p>36"x36"</p>
+</div>
+
+</div>
+
+<!-- Artwork 5 -->
+
+<div class="artwork">
+
+<img src="images/other5.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Cityscape diptych</p>
+<p>Acrylic on Canvas</p>
+<p>18"x24" each</p>
+</div>
+
+</div>
+
+<!-- Artwork 6 -->
+
+<div class="artwork">
+
+<img src="images/other6.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Fever Pitch</p>
+<p>Acrylic on Canvas</p>
+<p>24"x36"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 7 -->
+
+<div class="artwork">
+
+<img src="images/other7.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Primordial Sunset</p>
+<p>Acrylic on Canvas</p>
+<p>24"x36"</p>
+</div>
+
+</div>
+
+<!-- Artwork 8 -->
+
+<div class="artwork">
+
+<img src="images/other8.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Untitled #10 </p>
+<p>Acrylic on Canvas</p>
+<p>30"x40"</p>
+</div>
+
+</div>
+
+<!-- Artwork 9 -->
+
+<div class="artwork">
+
+<img src="images/other9.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Untitled #12</p>
+<p>Acrylic on Canvas</p>
+<p>30"x60"</p>
+</div>
+
+</div>
+<!-- Artwork 10 -->
+
+<div class="artwork">
+
+<img src="images/other10.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">All that Glitters</p>
+<p>Acrylic on Canvas</p>
+<p>SOLD</p>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- Lightbox viewer -->
+
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<span class="arrow left" onclick="changeImage(-1)">❮</span>
+
+<img id="lightbox-img">
+
+<span class="arrow right" onclick="changeImage(1)">❯</span>
+
+</div>
+
+
+<script>
+
+let images = [
+"images/other1.jpg",
+"images/other2.jpg",
+"images/other3.jpg",
+"images/other4.jpg",
+"images/other5.jpg",
+"images/other6.jpg",
+"images/other7.jpg",
+"images/other8.jpg",
+"images/other9.jpg",
+"images/other10.jpg",
+];
+
+let currentImage = 0;
+
+function openLightbox(src){
+
+currentImage = images.indexOf(src);
+
+document.getElementById("lightbox").style.display = "flex";
+
+document.getElementById("lightbox-img").src = src;
+
+}
+
+function closeLightbox(){
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+function changeImage(direction){
+
+currentImage += direction;
+
+if(currentImage < 0){
+currentImage = images.length - 1;
+}
+
+if(currentImage >= images.length){
+currentImage = 0;
+}
+
+document.getElementById("lightbox-img").src = images[currentImage];
+
+}
+
+</script>
+</body>
+
+</html>

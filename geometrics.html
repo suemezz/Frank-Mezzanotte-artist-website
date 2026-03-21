@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Geometrics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Art Mezzanotte</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About the Artist</a>
+
+</nav>
+
+<div class="container">
+
+<h2>Geometrics</h2>
+
+<div class="gallery">
+
+<!-- Artwork 1 -->
+
+<div class="artwork">
+
+<img src="images/geo1.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Yellow Geometric Rainbow</p>
+<p>Acrylic on Canvas</p>
+<p>36"x36"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 2 -->
+
+<div class="artwork">
+
+<img src="images/geo2.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Red Geometric Rainbow No. 3</p>
+<p>Acrylic on Canvas</p>
+<p>36"x36"</p>
+</div>
+
+</div>
+
+<!-- Artwork 3 -->
+
+<div class="artwork">
+
+<img src="images/geo3.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Blue Geometric Rainbow</p>
+<p>Acrylic on Canvas</p>
+<p>30"x40"</p>
+</div>
+
+<!-- Artwork 4 -->
+
+<div class="artwork">
+
+<img src="images/geo4.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">Red Geometric Rainbow No. 2</p>
+<p>Acrylic on Canvas</p>
+<p>36"x36"</p>
+<p> SOLD </p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Lightbox viewer -->
+
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<span class="arrow left" onclick="changeImage(-1)">❮</span>
+
+<img id="lightbox-img">
+
+<span class="arrow right" onclick="changeImage(1)">❯</span>
+
+</div>
+
+
+<script>
+
+let images = [
+"images/geo1.jpg",
+"images/geo2.jpg",
+"images/geo3.jpg",
+"images/geo4.jpg"
+];
+
+let currentImage = 0;
+
+function openLightbox(src){
+
+currentImage = images.indexOf(src);
+
+document.getElementById("lightbox").style.display = "flex";
+
+document.getElementById("lightbox-img").src = src;
+
+}
+
+function closeLightbox(){
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+function changeImage(direction){
+
+currentImage += direction;
+
+if(currentImage < 0){
+currentImage = images.length - 1;
+}
+
+if(currentImage >= images.length){
+currentImage = 0;
+}
+
+document.getElementById("lightbox-img").src = images[currentImage];
+
+}
+
+</script>
+</body>
+
+</html>

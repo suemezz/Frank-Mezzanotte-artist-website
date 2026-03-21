@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>allaJP - (Jackson Pollock Inspired Paintings)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Art Mezzanotte</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About the Artist</a>
+
+</nav>
+
+<div class="container">
+
+<h2>allaJP - (Jackson Pollock Inspired Paintings)</h2>
+
+<div class="gallery">
+
+<!-- Artwork 1 -->
+
+<div class="artwork">
+
+<img src="images/jp1.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 11</p>
+<p>Enamel on Canvas</p>
+<p>24"x36"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 2 -->
+
+<div class="artwork">
+
+<img src="images/jp2.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 32</p>
+<p>Acrylic on Canvas</p>
+<p>30"x30"</p>
+</div>
+
+</div>
+
+<!-- Artwork 3 -->
+
+<div class="artwork">
+
+<img src="images/jp3.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 31</p>
+<p>Enamel on Canvas</p>
+<p>36"x36"</p>
+</div>
+
+</div>
+
+<!-- Artwork 4 -->
+
+<div class="artwork">
+
+<img src="images/jp4.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 20</p>
+<p>Enamel on Canvas</p>
+<p>54"x96"</p>
+</div>
+
+</div>
+
+<!-- Artwork 5 -->
+
+<div class="artwork">
+
+<img src="images/jp5.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 21</p>
+<p>Enamel on Canvas</p>
+<p>54"x78"</p>
+</div>
+
+</div>
+
+<!-- Artwork 6 -->
+
+<div class="artwork">
+
+<img src="images/jp6.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 24</p>
+<p>Enamel on Canvas</p>
+<p>57"x57"</p>
+</div>
+
+</div>
+
+<!-- Artwork 7 -->
+
+<div class="artwork">
+
+<img src="images/jp7.jpg" onclick="openLightbox(this.src)">
+
+<div class="art-info">
+<p class="title">allaJP 10</p>
+<p>Enamel on Canvas</p>
+<p>30"x40"</p>
+<p>SOLD</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Lightbox viewer -->
+
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<span class="arrow left" onclick="changeImage(-1)">❮</span>
+
+<img id="lightbox-img">
+
+<span class="arrow right" onclick="changeImage(1)">❯</span>
+
+</div>
+
+
+<script>
+
+let images = [
+"images/jp1.jpg",
+"images/jp2.jpg",
+"images/jp3.jpg",
+"images/jp4.jpg",
+"images/jp5.jpg",
+"images/jp6.jpg",
+"images/jp7.jpg",
+];
+
+let currentImage = 0;
+
+function openLightbox(src){
+
+currentImage = images.indexOf(src);
+
+document.getElementById("lightbox").style.display = "flex";
+
+document.getElementById("lightbox-img").src = src;
+
+}
+
+function closeLightbox(){
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+function changeImage(direction){
+
+currentImage += direction;
+
+if(currentImage < 0){
+currentImage = images.length - 1;
+}
+
+if(currentImage >= images.length){
+currentImage = 0;
+}
+
+document.getElementById("lightbox-img").src = images[currentImage];
+
+}
+
+</script>
+</body>
+
+</html>
