@@ -492,18 +492,29 @@ color:white;
 
 cursor:pointer;
 
+
 }
-/* ---------- HOMEPAGE MOBILE FIX (MINIMAL & SAFE) ---------- */
+/* ---------- FIX TITLE BANNER ---------- */
 
 @media only screen and (max-width: 768px) {
 
-  .hero {
-    margin-top: 10px;   /* reduce large gap */
+  header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    line-height: 1.1;
   }
 
-  .hero img {
-    max-height: 220px;  /* shrink banner height on phones */
-    object-fit: cover;
+  header {
+    padding: 25px 10px 20px 10px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
   }
 
 }
