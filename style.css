@@ -1,5 +1,5 @@
 
-/* GENERAL PAGE */
+* GENERAL PAGE */
 
 body{
 font-family:'Lato', sans-serif;
@@ -8,6 +8,8 @@ line-height:1.7;
 margin:0;
 background:#f7f7f7;
 color:#222;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
 }
 
 
@@ -40,6 +42,8 @@ header h1{
 font-family:'Lobster Two', cursive;
 
 font-style:italic;
+
+font-weight:400;
 
 font-size:105px;
 
@@ -215,7 +219,7 @@ transform:scale(1.03);
 }
 
 
-/* LABELS UNDER SELECTED WORKS (FOR ANY HTML STRUCTURE) */
+/* LABELS UNDER SELECTED WORKS */
 
 .home-item a,
 .home-item p,
@@ -495,31 +499,7 @@ cursor:pointer;
 }
 
 
-/* ---------- HOMEPAGE TITLE FIX ONLY ---------- */
-
-@media only screen and (max-width: 768px) {
-
-  .home-page header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    line-height: 1.1;
-  }
-
-  .home-page header {
-    padding: 20px 10px;
-  }
-
-}
-
-@media only screen and (max-width: 480px) {
-
-  .home-page header h1 {
-    font-size: 34px;
-    letter-spacing: 2px;
-  }
-
-}
-/* ---------- HOMEPAGE BALANCE FIX ---------- */
+/* ---------- HOMEPAGE MOBILE ONLY ---------- */
 
 @media only screen and (max-width: 768px) {
 
@@ -527,16 +507,19 @@ cursor:pointer;
     padding: 20px 10px 15px 10px;
   }
 
-  .home-page .hero {
-    margin-top: 10px;
+  .home-page header h1 {
+    font-size:44px;
+    letter-spacing:2px;
+    line-height:1.1;
   }
 
-  .home-page h2 {
-    margin-top: 50px;
-  }
+}
 
-  .home-page nav a {
-    font-size: 26px;
+@media only screen and (max-width: 480px) {
+
+  .home-page header h1 {
+    font-size:34px;
+    letter-spacing:1px;
   }
 
 }
