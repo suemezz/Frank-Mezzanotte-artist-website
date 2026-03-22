@@ -493,3 +493,17 @@ color:white;
 cursor:pointer;
 
 }
+/* ---------- HOMEPAGE MOBILE FIX (MINIMAL & SAFE) ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  .hero {
+    margin-top: 10px;   /* reduce large gap */
+  }
+
+  .hero img {
+    max-height: 220px;  /* shrink banner height on phones */
+    object-fit: cover;
+  }
+
+}
