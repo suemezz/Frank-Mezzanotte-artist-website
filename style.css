@@ -514,50 +514,14 @@ cursor:pointer;
 
 }
 
-@media only screen and (max-width: 480px) {
 
-  header h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-  }
-
-}
-/* ---------- HOMEPAGE SELECTED WORKS MOBILE FIX ---------- */
+/* ---------- HOMEPAGE GRID FIX (2 COLUMNS ON MOBILE) ---------- */
 
 @media only screen and (max-width: 768px) {
 
-  .home-page .container {
-    overflow-x: hidden;
-  }
-
-  .home-page .home-gallery {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 16px !important;
-    margin-top: 30px !important;
-  }
-
-  .home-page .home-item {
-    width: calc(50% - 8px) !important;
-    box-sizing: border-box !important;
-    min-width: 0 !important;
-    display: block !important;
-  }
-
-  .home-page .home-item img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-  }
-
-  .home-page .home-item p {
-    font-size: 18px !important;
-    line-height: 1.2 !important;
-    letter-spacing: 0.5px !important;
-    margin-top: 10px !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
+  .home-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
 }
-
