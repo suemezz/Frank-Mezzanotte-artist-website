@@ -1,5 +1,6 @@
-/* GENERAL PAGE */
+e your entire style.css with this:
 
+/* GENERAL PAGE */
 
 body{
 font-family:'Lato', sans-serif;
@@ -492,15 +493,16 @@ color:white;
 
 cursor:pointer;
 
-
 }
+
+
 /* ---------- HOMEPAGE TITLE FIX ONLY ---------- */
 
 @media only screen and (max-width: 768px) {
 
   .home-page header h1 {
-    font-size: 44px;
-    letter-spacing: 1.5px;
+    font-size: 48px;
+    letter-spacing: 3px;
     line-height: 1.1;
   }
 
@@ -513,8 +515,8 @@ cursor:pointer;
 @media only screen and (max-width: 480px) {
 
   .home-page header h1 {
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 34px;
+    letter-spacing: 2px;
   }
 
 }
