@@ -554,3 +554,11 @@ cursor:pointer;
   }
 
 }
+/* ---------- HOMEPAGE MOBILE FIX ONLY ---------- */
+
+@media only screen and (max-width: 768px) {
+  .home-gallery {
+    grid-template-columns: 1fr; /* stack to 1 column on phones */
+    gap: 20px;
+  }
+}
