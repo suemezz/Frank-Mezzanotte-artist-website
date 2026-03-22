@@ -525,3 +525,18 @@ cursor:pointer;
 }
 
 }
+/* ---------- MOBILE FIX FOR HOMEPAGE SELECTED WORKS ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  .home-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .home-item p {
+    font-size: 20px;
+    word-break: break-word;
+  }
+
+}
