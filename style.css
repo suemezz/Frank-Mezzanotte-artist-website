@@ -590,3 +590,38 @@ cursor:pointer;
   }
 
 }
+/* ---------- HERO IMAGE MOBILE FIX ---------- */
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keep hero section from overflowing */
+.hero {
+  overflow: hidden;
+}
+
+/* Fix text positioning on smaller screens */
+@media only screen and (max-width: 768px) {
+
+  .hero-text {
+    position: static;       /* stops awkward overlay issues */
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+}
