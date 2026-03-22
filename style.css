@@ -519,3 +519,24 @@ cursor:pointer;
   }
 
 }
+/* ---------- HOMEPAGE BALANCE FIX ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  .home-page header {
+    padding: 20px 10px 15px 10px;
+  }
+
+  .home-page .hero {
+    margin-top: 10px;
+  }
+
+  .home-page h2 {
+    margin-top: 50px;
+  }
+
+  .home-page nav a {
+    font-size: 26px;
+  }
+
+}
