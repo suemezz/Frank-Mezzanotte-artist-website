@@ -494,26 +494,26 @@ cursor:pointer;
 
 
 }
-/* ---------- FIX TITLE BANNER ---------- */
+/* ---------- HOMEPAGE TITLE FIX ONLY ---------- */
 
 @media only screen and (max-width: 768px) {
 
-  header h1 {
-    font-size: 48px;
-    letter-spacing: 2px;
+  .home-page header h1 {
+    font-size: 44px;
+    letter-spacing: 1.5px;
     line-height: 1.1;
   }
 
-  header {
-    padding: 25px 10px 20px 10px;
+  .home-page header {
+    padding: 20px 10px;
   }
 
 }
 
 @media only screen and (max-width: 480px) {
 
-  header h1 {
-    font-size: 34px;
+  .home-page header h1 {
+    font-size: 30px;
     letter-spacing: 1px;
   }
 
