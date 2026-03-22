@@ -1,5 +1,5 @@
 
-* GENERAL PAGE */
+/* GENERAL PAGE */
 
 body{
 font-family:'Lato', sans-serif;
@@ -497,6 +497,8 @@ color:white;
 cursor:pointer;
 
 }
+
+
 /* ---------- MOBILE HEADER FIX FOR ALL PAGES ---------- */
 
 @media only screen and (max-width: 768px) {
@@ -521,6 +523,5 @@ cursor:pointer;
   }
 
 }
-
 
 }
