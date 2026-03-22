@@ -625,3 +625,67 @@ cursor:pointer;
   }
 
 }
+/* ---------- FINAL MOBILE FIX (SAFE) ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  /* Fix oversized title */
+  header h1 {
+    font-size: 52px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  header {
+    padding: 25px 10px 20px 10px;
+  }
+
+  /* Fix navigation spacing */
+  nav {
+    padding: 14px 10px;
+  }
+
+  nav a {
+    font-size: 18px;
+    margin: 0 8px;
+  }
+
+  /* Fix banner image scaling */
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  /* Fix banner text */
+  .hero-text h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+  /* Prevent page from feeling oversized */
+  .container {
+    padding: 25px 15px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+}
