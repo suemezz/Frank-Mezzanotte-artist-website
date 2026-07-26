@@ -4,15 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Geometrics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
 <header>
@@ -36,7 +36,7 @@
 
 <div class="artwork">
 
-<img src="images/geo1.jpg" onclick="openLightbox(this.src)">
+<img src="images/geo1.jpg" onclick="openLightbox(0)">
 
 <div class="art-info">
 <p class="title">Yellow Geometric Rainbow</p>
@@ -51,7 +51,7 @@
 
 <div class="artwork">
 
-<img src="images/geo2.jpg" onclick="openLightbox(this.src)">
+<img src="images/geo2.jpg" onclick="openLightbox(2)">
 
 <div class="art-info">
 <p class="title">Red Geometric Rainbow No. 3</p>
@@ -60,12 +60,11 @@
 </div>
 
 </div>
-
 <!-- Artwork 3 -->
 
 <div class="artwork">
 
-<img src="images/geo3.jpg" onclick="openLightbox(this.src)">
+<img src="images/geo3.jpg" onclick="openLightbox(4)">
 
 <div class="art-info">
 <p class="title">Blue Geometric Rainbow</p>
@@ -73,26 +72,58 @@
 <p>30"x40"</p>
 </div>
 
+</div>
+
+
 <!-- Artwork 4 -->
 
 <div class="artwork">
 
-<img src="images/geo4.jpg" onclick="openLightbox(this.src)">
+<img src="images/geo4.jpg" onclick="openLightbox(6)">
 
 <div class="art-info">
 <p class="title">Red Geometric Rainbow No. 2</p>
 <p>Acrylic on Canvas</p>
 <p>36"x36"</p>
-<p> SOLD </p>
-</div>
-
-</div>
-</div>
-
+<p>SOLD</p>
 </div>
 
 </div>
 
+
+<!-- Artwork 5 -->
+
+<div class="artwork">
+
+<img src="images/geo5.jpg" onclick="openLightbox(8)">
+
+<div class="art-info">
+<p class="title">Golden Triangle</p>
+<p>Acrylic on Canvas</p>
+<p>20"x24"</p>
+</div>
+
+</div>
+
+
+<!-- Artwork 6 -->
+
+<div class="artwork">
+
+<img src="images/geo6.jpg" onclick="openLightbox(10)">
+
+<div class="art-info">
+<p class="title">Entangled Harmony</p>
+<p>Acrylic on Canvas</p>
+<p>24"x24"</p>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 <!-- Lightbox viewer -->
 
@@ -108,48 +139,59 @@
 
 </div>
 
-
 <script>
 
-let images = [
-"images/geo1.jpg",
-"images/geo2.jpg",
-"images/geo3.jpg",
-"images/geo4.jpg"
+const images = [
+  "images/geo1.jpg",
+  "images/geo1-room.jpg",
+
+  "images/geo2.jpg",
+  "images/geo2-room.jpg",
+
+  "images/geo3.jpg",
+  "images/geo3-room.jpg",
+
+  "images/geo4.jpg",
+  "images/geo4-room.jpg",
+
+  "images/geo5.jpg",
+  "images/geo5-room.jpg",
+
+  "images/geo6.jpg",
+  "images/geo6-room.jpg"
 ];
 
 let currentImage = 0;
 
-function openLightbox(src){
+function openLightbox(imageNumber) {
 
-currentImage = images.indexOf(src);
+  currentImage = imageNumber;
 
-document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox").style.display = "flex";
 
-document.getElementById("lightbox-img").src = src;
-
+  document.getElementById("lightbox-img").src =
+    images[currentImage];
 }
 
-function closeLightbox(){
+function closeLightbox() {
 
-document.getElementById("lightbox").style.display = "none";
-
+  document.getElementById("lightbox").style.display = "none";
 }
 
-function changeImage(direction){
+function changeImage(direction) {
 
-currentImage += direction;
+  currentImage += direction;
 
-if(currentImage < 0){
-currentImage = images.length - 1;
-}
+  if (currentImage < 0) {
+    currentImage = images.length - 1;
+  }
 
-if(currentImage >= images.length){
-currentImage = 0;
-}
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
 
-document.getElementById("lightbox-img").src = images[currentImage];
-
+  document.getElementById("lightbox-img").src =
+    images[currentImage];
 }
 
 </script>
